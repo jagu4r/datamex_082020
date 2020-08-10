@@ -1,4 +1,6 @@
 # Juego del ahorcado
+# Data Analytics Bootcamp
+
 
 import random
 from palabras import palabras_lst
@@ -62,8 +64,8 @@ def play(word):
 
 
 def display_hangman(tries):
-    stages = [  # final state: head, torso, both arms, and both legs
-                """
+    stages = [
+        """
                    --------
                    |      |
                    |      O
@@ -72,8 +74,8 @@ def display_hangman(tries):
                    |     / \\
                    -
                 """,
-                # head, torso, both arms, and one leg
-                """
+
+        """
                    --------
                    |      |
                    |      O
@@ -82,8 +84,8 @@ def display_hangman(tries):
                    |     / 
                    -
                 """,
-                # head, torso, and both arms
-                """
+
+        """
                    --------
                    |      |
                    |      O
@@ -92,8 +94,8 @@ def display_hangman(tries):
                    |      
                    -
                 """,
-                # head, torso, and one arm
-                """
+
+        """
                    --------
                    |      |
                    |      O
@@ -102,8 +104,8 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # head and torso
-                """
+
+        """
                    --------
                    |      |
                    |      O
@@ -112,8 +114,8 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # head
-                """
+
+        """
                    --------
                    |      |
                    |      O
@@ -122,8 +124,8 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # initial empty state
-                """
+
+        """
                    --------
                    |      |
                    |      
