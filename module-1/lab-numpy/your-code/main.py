@@ -1,67 +1,103 @@
 #1. Import the NUMPY package under the name np.
-
+import numpy as np
 
 
 #2. Print the NUMPY version and the configuration.
-
+>>>np.__version__
+'1.19.1'
 
 
 #3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
-
-
+>>> a = np.random.random((2,3,5))
+>>> b = np.random.randint(1,101,5)
+importing random lib from numpy
 
 #4. Print a.
+>>>print (a)
+
+[[[0.88736344 0.33289781 0.07324652 0.51151852 0.62452022]
+  [0.52055247 0.55052649 0.78797497 0.45896403 0.38052225]
+  [0.23062283 0.59465641 0.81521016 0.30918703 0.76077323]]
+
+ [[0.79093656 0.08482366 0.02993987 0.44511036 0.60447527]
+  [0.83188768 0.97048985 0.47472016 0.54925745 0.49799166]
+  [0.00557856 0.11479805 0.17343142 0.04607313 0.72838187]]]
 
 
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
-
-
+>>> x = np.random.random((5,2,3))
+>>> b =np.ones_like(a)
 
 #6. Print b.
+>>> print(b)
+([[[1., 1., 1.],
+        [1., 1., 1.]],
 
+       [[1., 1., 1.],
+        [1., 1., 1.]],
+
+       [[1., 1., 1.],
+        [1., 1., 1.]],
+
+       [[1., 1., 1.],
+        [1., 1., 1.]],
+
+       [[1., 1., 1.],
+        [1., 1., 1.]]])
 
 
 #7. Do a and b have the same size? How do you prove that in Python code?
-
+Yes, np.size(a) = np.size(b) = 30
 
 
 
 #8. Are you able to add a and b? Why or why not?
+No, because matrix a and matrix b are not the same shape.
 
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
+When transposed, matrix c could not sum matriz a due to its shape. 
+c = np.reshape(b,(2,3,5))
+
 
 
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
-
+d = a+c
 
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
-
-
+print("array a: ",a)
+print("array d: ",d)
 
 
 #12. Multiply a and c. Assign the result to e.
-
+e = a*c
 
 
 #13. Does e equal to a? Why or why not?
-
+compare = e==a
+print(compare.all())
 
 
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
+d_max = np.max(d)
+d_min = np.min(d)
+d_mean = np.mean(d)
 
+print("max",d_max)
+print("min",d_min)
+print("mean",d_mean)
 
 
 
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
-
+f = np.empty((2,3,5))
 
 
 
